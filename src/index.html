@@ -3,17 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>News Aggregator</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/index.css">
+  <title>News2you</title>
+  <script src="https://unpkg.com/lodash@4.16.6"></script>
 </head>
 <body>
-  <h1 class="site-title">News Aggregator</h1>
-  
-  <div class="search-container">
-    <input type="text" name="search" id="search" placeholder="Type and press enter to search..." />
+  <!--<h1>webpack starter</h1>
+  <p>✨ A lightweight foundation for your next webpack based frontend project.</p>-->
+
+  <!--NAVBAR-->
+  <nav class="navbar navbar-dark bg-dark text-center mb-3">
+    <div class="container">
+      <header class="navbar-brand"><strong>News2you</strong></header></header>
+    </div>
+  </nav>
+  <div id="search-container" class="container">
+    <div id="searchh" class="card card-body bg-light mb-2">
+      <h4>Search News</h4>
+      <form id="search-form">
+        <div class="form-group">
+          <input type="text" id="search" class="form-control mb-3" placeholder="Type and press enter to search...">
+        </div>
+        <div class="form-check form-check-inline">
+          Sort By:
+          <input class="form-check-input ml-2" type="radio" name="sortby" value="relevance" checked>
+          <label class="form-check-label">
+            Relevance
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sortby" value="new">
+          <label class="form-check-label">
+            Latest
+          </label>
+        </div>
+        
+        <button type="submit" class="btn btn-dark btn-block mt-4">Search</button>
+      </form>
+    </div>
   </div>
 
-  <ul id="news-articles">
+  <section class="loader">
+      <section class="yellow"></section>
+      <section class="red"></section>
+      <section class="blue"></section>
+      <section class="violet"></section>
+  </section>
 
-  </ul>
+  <!--FOR TEST CASES TO PASS-->
+  <div class="row">
+    <div class="card-deck col">
+      <ul id="news-articles" style="list-style-type:none;">
+        <li class="article">
+          <img class="article-img"></img>
+          <h2 class="article-title"></h2>
+          <p class="article-description"></p>
+          <span class="article-author"></span>
+          <a href="" class="article-link"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row" id="result">
+    <div class="col">
+      <div id=""class="not-found"></div>  
+    </div>
+  </div> 
+
+  
+  
+
+ 
+  <script src="./scripts/index.js"></script>
 </body>
+
 </html>
